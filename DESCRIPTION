@@ -1,0 +1,15 @@
+Package: heartfill
+Title: Novelty Fill Patterns (Hearts, Stars, Flowers, Butterflies, Cats, Dogs, Unicorns,
+    Sugar Beets, Computers) for 'ggplot2' Plots
+Version: 0.1.0
+Authors@R: person("Alexander", "Molin", email = "alexander.karl.molin@gmail.com", role = c("aut", "cre"))
+Description: Adds new fill patterns (hearts, stars, flowers, butterflies, cats, dogs, unicorns,
+    sugar beets, computers) to 'ggpattern'
+    geoms such as geom_col_pattern() and geom_bar_pattern().
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends: R (>= 4.1.0)
+Imports: grid, gridpattern
+Suggests: ggplot2, ggpattern
+Config/roxygen2/version: 8.1.0
