@@ -1,15 +1,19 @@
 Package: heartfill
-Title: Novelty Fill Patterns (Hearts, Stars, Flowers, Butterflies, Cats, Dogs, Unicorns,
-    Sugar Beets, Computers) for 'ggplot2' Plots
-Version: 0.1.0
+Title: Novelty Fill Patterns, Mascot Points and DNA Error Bars for 'ggplot2'
+Version: 0.2.0
 Authors@R: person("Alexander", "Molin", email = "alexander.karl.molin@gmail.com", role = c("aut", "cre"))
-Description: Adds new fill patterns (hearts, stars, flowers, butterflies, cats, dogs, unicorns,
-    sugar beets, computers) to 'ggpattern'
-    geoms such as geom_col_pattern() and geom_bar_pattern().
+Description: Adds novelty fill patterns (hearts, stars, flowers, butterflies,
+    cats, dogs, unicorns, sugar beets, computers, repeated text and a
+    recolourable hand-drawn mascot) to 'ggpattern' geoms such as
+    geom_col_pattern(), plus two 'ggplot2' geoms: geom_viri() draws the mascot
+    as scatterplot points and geom_errorbar_dna() draws error bars as a DNA
+    double helix.
 License: MIT + file LICENSE
+URL: https://github.com/alexandermolin/heartfill
+BugReports: https://github.com/alexandermolin/heartfill/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 Depends: R (>= 4.1.0)
-Imports: grid, gridpattern
-Suggests: ggplot2, ggpattern
+Imports: ggplot2, grid, grDevices, gridpattern, png
+Suggests: ggpattern
 Config/roxygen2/version: 8.1.0

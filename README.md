@@ -1,11 +1,15 @@
 # heartfill
 
-Novelty fill patterns for **ggplot2** bar plots (and any other
-[ggpattern](https://coolbutuseless.github.io/package/ggpattern/) geom):
-hearts, stars, flowers, butterflies, cats, dogs, unicorns, sugar beets and
-computers.
+Novelty extras for **ggplot2**:
 
-![Every heartfill pattern](man/figures/all_patterns.png)
+- **Fill patterns** for any
+  [ggpattern](https://coolbutuseless.github.io/package/ggpattern/) geom:
+  hearts, stars, flowers, butterflies, cats, dogs, unicorns, sugar beets,
+  computers, repeated text and the Viri mascot.
+- **`geom_viri()`**: the Viri mascot as scatterplot points.
+- **`geom_errorbar_dna()`**: error bars drawn as a DNA double helix.
+
+![Every heartfill shape pattern](man/figures/all_patterns.png)
 
 The patterns plug into `ggpattern`: loading `heartfill` registers them, so you
 use them with `pattern = "hearts"` etc. in `geom_col_pattern()`,
@@ -13,14 +17,21 @@ use them with `pattern = "hearts"` etc. in `geom_col_pattern()`,
 
 ## Installation
 
-Requires R >= 4.1 with `ggplot2` and `ggpattern` (which brings `gridpattern`).
+Requires R >= 4.1.
 
-```bash
-# from the directory containing the package folder
-R CMD INSTALL heartfill
+```r
+# install.packages("remotes")
+remotes::install_github("alexandermolin/heartfill")
 ```
 
-If `ggpattern` is missing: `conda install -c conda-forge r-ggpattern`.
+This installs `ggplot2`, `gridpattern` and `png` if needed. The fill patterns
+are used through `ggpattern`, which you install separately:
+
+```r
+install.packages("ggpattern")
+```
+
+With conda: `conda install -c conda-forge r-remotes r-ggpattern r-png`.
 
 ## Usage
 
@@ -61,6 +72,30 @@ Each pattern draws its shape function's defaults. Holes in a shape (flower
 centres, cat, dog and unicorn faces, gaps between butterfly parts and around
 the unicorn's horn and mane, beet leaf veins and rings, computer screens and
 keys) let the bar fill show through.
+
+### Viri (image fill)
+
+`pattern = "viris"` tiles Viri, a hand-drawn virus-capsid mascot. It is an
+image rather than a shape, and `pattern_fill` changes the colour of its marker
+ink while the black outlines and white paper stay as drawn:
+
+```r
+ggplot(df, aes(group, value)) +
+  geom_col_pattern(
+    aes(pattern_fill = group),   # one ink colour per bar
+    pattern = "viris",
+    pattern_angle = 0,
+    pattern_spacing = 0.13,      # the drawing needs larger tiles to read
+    pattern_density = 0.9,
+    fill = "white"
+  )
+```
+
+Use `pattern_fill = NA` for the original yellow. `pattern_colour` is ignored.
+`viri_image(colour)` returns the recoloured drawing as an RGBA array for use
+outside a pattern, e.g. `grid::grid.raster(viri_image("#2a78d6"))`.
+
+![Bars filled with Viris](man/figures/viri_barplot.png)
 
 ### Text fills
 
@@ -104,6 +139,53 @@ Choose colours for a mapped `pattern_fill` with
 `scale_pattern_fill_manual(values = ...)`. To give each bar its own shape, map
 `pattern` as well and add `scale_pattern_manual()`; see
 `inst/examples/all_patterns_barplot.R`.
+
+### Viri scatterplots
+
+`geom_viri()` draws a Viri at each point, like `geom_point()` (plain ggplot2,
+no `ggpattern` needed):
+
+```r
+ggplot(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
+  geom_viri(size = 7)
+```
+
+`colour` sets the ink colour (default `NA`: the original yellow), `size` is
+the mascot's longer side in mm (default 8), and `alpha` and `angle` work as
+usual. When mapping `size`, add e.g. `scale_size(range = c(5, 14))`. See
+`inst/examples/viri_scatterplot.R`.
+
+![Scatterplot with Viris as points](man/figures/viri_scatterplot.png)
+
+### DNA error bars
+
+`geom_errorbar_dna()` draws error bars as a DNA double helix from `ymin` to
+`ymax`. It is a plain ggplot2 geom (no `ggpattern` needed) and takes the same
+aesthetics as `geom_errorbar()`:
+
+```r
+df$se <- c(1, 2, 0.8)
+ggplot(df, aes(group, value)) +
+  geom_col(fill = "grey85") +
+  geom_errorbar_dna(aes(ymin = value - se, ymax = value + se),
+                    width = 0.15)   # helix width in x-axis units
+```
+
+| Argument / aesthetic | What it does                                              | Default |
+|----------------------|-----------------------------------------------------------|---------|
+| `width`              | helix width in x-axis units                               | 0.2     |
+| `pitch`              | length of one full turn, as a multiple of the width       | 1.7     |
+| `rungs`              | base-pair rungs per half-turn                             | 4       |
+| `bases`              | `TRUE` colours rungs as A/T/G/C pairs, `FALSE` uses the strand colour, or give four colours | `TRUE` |
+| `colour`             | first strand and end caps                                 | grey20  |
+| `colour2`            | second strand                                             | lighter tint of `colour` |
+| `linewidth`, `alpha` | strand thickness and transparency                         | 0.6, 1  |
+
+Each helix ends in a full-width rung at exactly `ymin` and `ymax`. It works
+with `position_dodge()` and `coord_flip()`; see
+`inst/examples/dna_errorbar_barplot.R`.
+
+![Bar plot with DNA error bars](man/figures/dna_errorbar_barplot.png)
 
 ## Examples
 

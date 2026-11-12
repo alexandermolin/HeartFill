@@ -8,7 +8,8 @@ heartfill_patterns <- function() {
        dogs = create_pattern_dogs,
        unicorns = create_pattern_unicorns,
        sugarbeets = create_pattern_sugarbeets,
-       computers = create_pattern_computers)
+       computers = create_pattern_computers,
+       viris = create_pattern_viris)
 }
 
 .onLoad <- function(libname, pkgname) {
