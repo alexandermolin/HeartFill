@@ -1,6 +1,6 @@
 # HeartFill
 
-Novelty extras for **ggplot2**:
+AI generated (not reviewed) novelty extras for **ggplot2**:
 
 - **Fill patterns** for any
   [ggpattern](https://coolbutuseless.github.io/package/ggpattern/) geom:
