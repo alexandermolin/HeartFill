@@ -21,7 +21,7 @@ Requires R >= 4.1.
 
 ```r
 # install.packages("remotes")
-remotes::install_github("alexandermolin/heartfill")
+remotes::install_github("alexandermolin/HeartFill")
 ```
 
 This installs `ggplot2`, `gridpattern` and `png` if needed. The fill patterns
