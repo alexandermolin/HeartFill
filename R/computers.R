@@ -59,7 +59,7 @@ computer_shape <- function(screen = TRUE, keyboard = TRUE) {
 #' Computers pattern geometry for ggpattern / gridpattern
 #'
 #' Draws a staggered grid of desktop computers clipped to the boundary
-#' polygon. After `library(heartfill)` use `pattern = "computers"` in any
+#' polygon. After `library(HeartFill)` use `pattern = "computers"` in any
 #' `ggpattern` geom. Honours the same aesthetics as
 #' [create_pattern_hearts()].
 #'

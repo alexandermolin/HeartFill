@@ -20,6 +20,6 @@ A grob.
 }
 \description{
 Draws a staggered grid of cat faces clipped to the boundary polygon.
-After \code{library(heartfill)} use \code{pattern = "cats"} in any \code{ggpattern}
+After \code{library(HeartFill)} use \code{pattern = "cats"} in any \code{ggpattern}
 geom. Honours the same aesthetics as \code{\link[=create_pattern_hearts]{create_pattern_hearts()}}.
 }

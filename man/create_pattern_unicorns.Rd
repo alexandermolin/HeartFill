@@ -20,6 +20,6 @@ A grob.
 }
 \description{
 Draws a staggered grid of unicorn heads clipped to the boundary polygon.
-After \code{library(heartfill)} use \code{pattern = "unicorns"} in any \code{ggpattern}
+After \code{library(HeartFill)} use \code{pattern = "unicorns"} in any \code{ggpattern}
 geom. Honours the same aesthetics as \code{\link[=create_pattern_hearts]{create_pattern_hearts()}}.
 }

@@ -1,5 +1,7 @@
-# heartfill 0.2.0
+# HeartFill 0.2.0
 
+* The package is now called `HeartFill` (was `heartfill`); load it with
+  `library(HeartFill)`.
 * New fill pattern `"viris"`: tiles the hand-drawn Viri mascot; `pattern_fill`
   recolours its marker ink.
 * New `geom_viri()`: Viri mascots as scatterplot points.
@@ -8,7 +10,7 @@
   marker drawing) outside a plot.
 * `ggplot2` and `png` are now imported.
 
-# heartfill 0.1.0
+# HeartFill 0.1.0
 
 * Fill patterns for `ggpattern`: hearts, stars, flowers, butterflies, cats,
   dogs, unicorns, sugar beets and computers.

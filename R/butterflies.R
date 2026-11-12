@@ -45,7 +45,7 @@ butterfly_shape <- function(antenna_width = 0.03) {
 #' Butterflies pattern geometry for ggpattern / gridpattern
 #'
 #' Draws a staggered grid of butterflies clipped to the boundary polygon.
-#' After `library(heartfill)` use `pattern = "butterflies"` in any
+#' After `library(HeartFill)` use `pattern = "butterflies"` in any
 #' `ggpattern` geom. Honours the same aesthetics as
 #' [create_pattern_hearts()].
 #'

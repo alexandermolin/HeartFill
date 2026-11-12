@@ -1,4 +1,4 @@
-Package: heartfill
+Package: HeartFill
 Title: Novelty Fill Patterns, Mascot Points and DNA Error Bars for 'ggplot2'
 Version: 0.2.0
 Authors@R: person("Alexander", "Molin", email = "alexander.karl.molin@gmail.com", role = c("aut", "cre"))

@@ -17,7 +17,7 @@ heart_shape <- function(n = 60) {
 #' Hearts pattern geometry for ggpattern / gridpattern
 #'
 #' Draws a staggered grid of hearts clipped to the boundary polygon. Not
-#' usually called directly: after `library(heartfill)` use
+#' usually called directly: after `library(HeartFill)` use
 #' `pattern = "hearts"` in any `ggpattern` geom.
 #'
 #' Honoured aesthetics: `pattern_fill` (heart colour), `pattern_colour`

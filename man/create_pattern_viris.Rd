@@ -20,7 +20,7 @@ A grob.
 }
 \description{
 Draws a staggered grid of Viri mascots (see \code{\link[=viri_image]{viri_image()}}) clipped to the
-boundary polygon. After \code{library(heartfill)} use \code{pattern = "viris"} in
+boundary polygon. After \code{library(HeartFill)} use \code{pattern = "viris"} in
 any \code{ggpattern} geom.
 }
 \details{

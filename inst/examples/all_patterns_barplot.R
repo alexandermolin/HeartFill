@@ -1,7 +1,7 @@
-# One bar per heartfill pattern, each in its own colour.
+# One bar per HeartFill pattern, each in its own colour.
 library(ggplot2)
 library(ggpattern)
-library(heartfill)
+library(HeartFill)
 
 set.seed(sample.int(1e6, 1))
 patterns <- c("hearts", "stars", "flowers", "butterflies", "cats", "dogs",
@@ -38,7 +38,7 @@ p <- ggplot(df, aes(pattern, value)) +
   scale_pattern_spacing_identity() +
   scale_pattern_density_identity() +
   scale_y_continuous(expand = expansion(mult = c(0, 0.05))) +
-  labs(title = "heartfill: every pattern", x = NULL, y = "Value") +
+  labs(title = "HeartFill: every pattern", x = NULL, y = "Value") +
   theme_minimal(base_size = 13) +
   theme(panel.grid.major.x = element_blank(),
         panel.grid.minor = element_blank(),

@@ -1,6 +1,6 @@
 # Random scatterplot with Viri mascots as points, one ink colour per group.
 library(ggplot2)
-library(heartfill)
+library(HeartFill)
 
 set.seed(sample.int(1e6, 1))
 n <- 14

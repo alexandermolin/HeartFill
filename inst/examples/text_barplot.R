@@ -1,7 +1,7 @@
 # Random 4-bar barplot, each bar filled with its own text at its own angle.
 library(ggplot2)
 library(ggpattern)
-library(heartfill)
+library(HeartFill)
 
 set.seed(sample.int(1e6, 1))
 df <- data.frame(
@@ -11,7 +11,7 @@ df <- data.frame(
 
 # text_pattern() registers each text/angle pair and returns its pattern name.
 fills <- c(A = text_pattern("hello", 0),
-           B = text_pattern("heartfill", 30),
+           B = text_pattern("HeartFill", 30),
            C = text_pattern("R", 90, fontface = "bold"),
            D = text_pattern("ggplot2", -45, fontface = "italic"))
 

@@ -20,7 +20,7 @@ A grob.
 }
 \description{
 Draws a staggered grid of butterflies clipped to the boundary polygon.
-After \code{library(heartfill)} use \code{pattern = "butterflies"} in any
+After \code{library(HeartFill)} use \code{pattern = "butterflies"} in any
 \code{ggpattern} geom. Honours the same aesthetics as
 \code{\link[=create_pattern_hearts]{create_pattern_hearts()}}.
 }

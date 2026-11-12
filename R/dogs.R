@@ -44,7 +44,7 @@ dog_shape <- function(face = TRUE) {
 #' Dogs pattern geometry for ggpattern / gridpattern
 #'
 #' Draws a staggered grid of dog faces clipped to the boundary polygon.
-#' After `library(heartfill)` use `pattern = "dogs"` in any `ggpattern`
+#' After `library(HeartFill)` use `pattern = "dogs"` in any `ggpattern`
 #' geom. Honours the same aesthetics as [create_pattern_hearts()].
 #'
 #' @inheritParams create_pattern_hearts

@@ -20,7 +20,7 @@ A grob.
 }
 \description{
 Draws a staggered grid of hearts clipped to the boundary polygon. Not
-usually called directly: after \code{library(heartfill)} use
+usually called directly: after \code{library(HeartFill)} use
 \code{pattern = "hearts"} in any \code{ggpattern} geom.
 }
 \details{

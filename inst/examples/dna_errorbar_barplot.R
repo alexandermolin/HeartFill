@@ -1,6 +1,6 @@
 # Random 5-bar barplot with DNA double-helix error bars.
 library(ggplot2)
-library(heartfill)
+library(HeartFill)
 
 set.seed(sample.int(1e6, 1))
 df <- data.frame(

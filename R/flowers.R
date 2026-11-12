@@ -35,7 +35,7 @@ flower_shape <- function(petals = 5, depth = 0.6, centre = 0.2, n = 200) {
 #' Flowers pattern geometry for ggpattern / gridpattern
 #'
 #' Draws a staggered grid of five-petal flowers clipped to the boundary
-#' polygon. After `library(heartfill)` use `pattern = "flowers"` in any
+#' polygon. After `library(HeartFill)` use `pattern = "flowers"` in any
 #' `ggpattern` geom. Honours the same aesthetics as
 #' [create_pattern_hearts()].
 #'

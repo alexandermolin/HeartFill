@@ -48,7 +48,7 @@ cat_shape <- function(eyes = TRUE, n = 120) {
 #' Cats pattern geometry for ggpattern / gridpattern
 #'
 #' Draws a staggered grid of cat faces clipped to the boundary polygon.
-#' After `library(heartfill)` use `pattern = "cats"` in any `ggpattern`
+#' After `library(HeartFill)` use `pattern = "cats"` in any `ggpattern`
 #' geom. Honours the same aesthetics as [create_pattern_hearts()].
 #'
 #' @inheritParams create_pattern_hearts

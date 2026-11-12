@@ -20,7 +20,7 @@ A grob.
 }
 \description{
 Draws a staggered grid of five-pointed stars clipped to the boundary
-polygon. After \code{library(heartfill)} use \code{pattern = "stars"} in any
+polygon. After \code{library(HeartFill)} use \code{pattern = "stars"} in any
 \code{ggpattern} geom. Honours the same aesthetics as
 \code{\link[=create_pattern_hearts]{create_pattern_hearts()}}.
 }

@@ -81,7 +81,7 @@ sugarbeet_shape <- function(leaves = 3, details = TRUE, m = 30) {
 #' Sugar beets pattern geometry for ggpattern / gridpattern
 #'
 #' Draws a staggered grid of sugar beets clipped to the boundary polygon.
-#' After `library(heartfill)` use `pattern = "sugarbeets"` in any
+#' After `library(HeartFill)` use `pattern = "sugarbeets"` in any
 #' `ggpattern` geom. Honours the same aesthetics as
 #' [create_pattern_hearts()].
 #'

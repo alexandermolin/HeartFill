@@ -1,4 +1,4 @@
-# heartfill
+# HeartFill
 
 Novelty extras for **ggplot2**:
 
@@ -9,9 +9,9 @@ Novelty extras for **ggplot2**:
 - **`geom_viri()`**: the Viri mascot as scatterplot points.
 - **`geom_errorbar_dna()`**: error bars drawn as a DNA double helix.
 
-![Every heartfill shape pattern](man/figures/all_patterns.png)
+![Every HeartFill shape pattern](man/figures/all_patterns.png)
 
-The patterns plug into `ggpattern`: loading `heartfill` registers them, so you
+The patterns plug into `ggpattern`: loading `HeartFill` registers them, so you
 use them with `pattern = "hearts"` etc. in `geom_col_pattern()`,
 `geom_bar_pattern()`, `geom_area_pattern()`, …
 
@@ -38,7 +38,7 @@ With conda: `conda install -c conda-forge r-remotes r-ggpattern r-png`.
 ```r
 library(ggplot2)
 library(ggpattern)
-library(heartfill)   # registers the patterns
+library(HeartFill)   # registers the patterns
 
 df <- data.frame(group = c("A", "B", "C"), value = c(5, 9, 3))
 
@@ -192,14 +192,14 @@ with `position_dodge()` and `coord_flip()`; see
 Runnable demo scripts ship with the package:
 
 ```r
-list.files(system.file("examples", package = "heartfill"), full.names = TRUE)
+list.files(system.file("examples", package = "HeartFill"), full.names = TRUE)
 ```
 
 Each writes a PNG (optionally to a path given as the first command-line
 argument), e.g.
 
 ```bash
-Rscript "$(Rscript -e 'cat(system.file("examples/all_patterns_barplot.R", package = "heartfill"))')" my_plot.png
+Rscript "$(Rscript -e 'cat(system.file("examples/all_patterns_barplot.R", package = "HeartFill"))')" my_plot.png
 ```
 
 ## Adding a pattern

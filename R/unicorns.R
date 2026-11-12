@@ -81,7 +81,7 @@ unicorn_shape <- function(mane = TRUE, face = TRUE, m = 24) {
 #' Unicorns pattern geometry for ggpattern / gridpattern
 #'
 #' Draws a staggered grid of unicorn heads clipped to the boundary polygon.
-#' After `library(heartfill)` use `pattern = "unicorns"` in any `ggpattern`
+#' After `library(HeartFill)` use `pattern = "unicorns"` in any `ggpattern`
 #' geom. Honours the same aesthetics as [create_pattern_hearts()].
 #'
 #' @inheritParams create_pattern_hearts

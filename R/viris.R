@@ -15,7 +15,7 @@
 viri_image <- function(colour = NULL, alpha = 1) {
   if (is.null(viri_cache$base)) {
     viri_cache$base <- png::readPNG(
-      system.file("extdata", "viri.png", package = "heartfill", mustWork = TRUE)
+      system.file("extdata", "viri.png", package = "HeartFill", mustWork = TRUE)
     )
   }
   img <- viri_cache$base
@@ -62,7 +62,7 @@ viri_cache <- new.env(parent = emptyenv())
 #' Viris pattern geometry for ggpattern / gridpattern
 #'
 #' Draws a staggered grid of Viri mascots (see [viri_image()]) clipped to the
-#' boundary polygon. After `library(heartfill)` use `pattern = "viris"` in
+#' boundary polygon. After `library(HeartFill)` use `pattern = "viris"` in
 #' any `ggpattern` geom.
 #'
 #' Unlike the shape patterns this one tiles an image. `pattern_fill` sets the

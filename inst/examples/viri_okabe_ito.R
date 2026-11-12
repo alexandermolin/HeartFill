@@ -1,11 +1,11 @@
 # Recolour a Viri drawing in each colour of the Okabe-Ito palette.
 # Usage: Rscript viri_okabe_ito.R [input.png] [output_dir]
 # Without an input the packaged (480 px) drawing is used.
-library(heartfill)
+library(HeartFill)
 
 args <- commandArgs(TRUE)
 input <- if (length(args) >= 1) args[1] else
-  system.file("extdata", "viri.png", package = "heartfill", mustWork = TRUE)
+  system.file("extdata", "viri.png", package = "HeartFill", mustWork = TRUE)
 outdir <- if (length(args) >= 2) args[2] else "viri_okabe_ito"
 
 okabe_ito <- c(orange = "#E69F00", skyblue = "#56B4E9", bluishgreen = "#009E73",

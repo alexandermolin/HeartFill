@@ -23,7 +23,7 @@ star_shape <- function(points = 5, inner = 0.382) {
 #' Stars pattern geometry for ggpattern / gridpattern
 #'
 #' Draws a staggered grid of five-pointed stars clipped to the boundary
-#' polygon. After `library(heartfill)` use `pattern = "stars"` in any
+#' polygon. After `library(HeartFill)` use `pattern = "stars"` in any
 #' `ggpattern` geom. Honours the same aesthetics as
 #' [create_pattern_hearts()].
 #'

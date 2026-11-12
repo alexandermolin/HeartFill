@@ -1,7 +1,7 @@
 # Random 5-bar barplot filled with flowers, one flower colour per bar.
 library(ggplot2)
 library(ggpattern)
-library(heartfill)
+library(HeartFill)
 
 set.seed(sample.int(1e6, 1))
 df <- data.frame(
