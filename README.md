@@ -114,9 +114,33 @@ ggplot(df, aes(group, value)) +
 ```
 
 For a different text per bar, map `pattern` and pass the names to
-`scale_pattern_manual()`; see `inst/examples/text_barplot.R`. The text's own
-`angle` is used (`pattern_angle` is ignored). Registration lasts for the
-session, so re-run `text_pattern()` before redrawing a saved plot later.
+`scale_pattern_manual()`:
+
+```r
+df4 <- data.frame(group = c("A", "B", "C", "D"), value = c(18, 16.6, 12.5, 19.9))
+
+fills <- c(A = text_pattern("hello", 0),
+           B = text_pattern("HeartFill", 30),
+           C = text_pattern("R", 90, fontface = "bold"),
+           D = text_pattern("ggplot2", -45, fontface = "italic"))
+
+ggplot(df4, aes(group, value)) +
+  geom_col_pattern(
+    aes(pattern = group, pattern_fill = group),
+    fill = "white",
+    colour = "grey30",
+    pattern_spacing = 0.04,
+    pattern_density = 0.7
+  ) +
+  scale_pattern_manual(values = fills) +
+  scale_pattern_fill_manual(values = c("#2a78d6", "#eb6834", "#1baf7a", "#eda100"))
+```
+
+![Bars filled with repeated text](man/figures/text_barplot.png)
+
+The full script is `inst/examples/text_barplot.R`. The text's own `angle` is
+used (`pattern_angle` is ignored). Registration lasts for the session, so
+re-run `text_pattern()` before redrawing a saved plot later.
 
 ### Settings
 
