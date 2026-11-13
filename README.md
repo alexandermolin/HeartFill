@@ -219,4 +219,6 @@ Rscript "$(Rscript -e 'cat(system.file("examples/all_patterns_barplot.R", packag
 
 ## License
 
-MIT
+GPL (>= 3). See [LICENSE.md](LICENSE.md) for the full text.
+
+Copyright (C) 2026 Alexander Molin
